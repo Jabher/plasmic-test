@@ -1,5 +1,4 @@
 import * as ui from "@lidofinance/lido-ui";
-import type { NextJsPlasmicComponentLoader } from "@plasmicapp/loader-nextjs";
 
 const icons: Array<keyof typeof ui> = [
   "Ambire",
@@ -87,21 +86,20 @@ const icons: Array<keyof typeof ui> = [
   "Zengo"
 ];
 
-// todo walletConnectProjectId prop
-export const registerIcon = (plasmic: NextJsPlasmicComponentLoader) => {
-  plasmic.registerComponent(
-    ({ color, type }: { color?: string; type: typeof icons[number] }) => {
-      // eslint-disable-next-line import/namespace
-      const Component = ui[type];
+export const Icon = Object.assign(
+  ({ color, type }: { color?: string; type: typeof icons[number] }) => {
+    // eslint-disable-next-line import/namespace
+    const Component = ui[type];
 
-      return <Component style={{ fill: color || `currentcolor` }} />;
-    },
-    {
-      name: "Lido/Icon",
+    return <Component style={{ fill: color || `currentcolor` }} />;
+  },
+  {
+    plasmicConfig: {
       props: {
         color: { type: "color" },
         type: { type: "choice", options: icons }
       }
-    }
-  );
-};
+    } as const
+  }
+)
+

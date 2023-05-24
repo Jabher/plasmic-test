@@ -7,7 +7,7 @@
   },
   "style": {
     "scheme": "css-modules",
-    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
   },
   "images": {
     "scheme": "public-files",
@@ -59,108 +59,108 @@
         },
         {
           "id": "bXU3BFjMmK",
-          "name": "CompbXu3BFjMmK",
-          "componentImportPath": ""
-        },
-        {
-          "id": "6rKDqET-8x",
-          "name": "Comp6RKDqEt8X",
-          "componentImportPath": ""
-        },
-        {
-          "id": "PkBBtmUHy8",
-          "name": "CompPkBBtmUHy8",
-          "componentImportPath": ""
-        },
-        {
-          "id": "Xawl-OK4UU",
-          "name": "CompXawlOk4Uu",
-          "componentImportPath": ""
-        },
-        {
-          "id": "oiw3FQq187",
-          "name": "Compoiw3FQq187",
-          "componentImportPath": ""
-        },
-        {
-          "id": "ocQY_l68koy",
-          "name": "CompocQyL68Koy",
-          "componentImportPath": ""
-        },
-        {
-          "id": "xzRNMFCzyRu",
-          "name": "CompxzRnmfCzyRu",
-          "componentImportPath": ""
-        },
-        {
-          "id": "FPddWnMMxNu",
-          "name": "CompFPddWnMMxNu",
-          "componentImportPath": ""
-        },
-        {
-          "id": "m1tPo2zOSFU",
-          "name": "Compm1TPo2ZOsfu",
-          "componentImportPath": ""
-        },
-        {
-          "id": "6qulXqih3du",
-          "name": "Comp6QulXqih3Du",
-          "componentImportPath": ""
-        },
-        {
-          "id": "Eami54oc80w",
-          "name": "CompEami54Oc80W",
-          "componentImportPath": ""
-        },
-        {
-          "id": "61LQ-9kG_2Q",
-          "name": "Comp61Lq9KG2Q",
-          "componentImportPath": ""
-        },
-        {
-          "id": "jXyMiMrShO1",
-          "name": "CompjXyMiMrShO1",
-          "componentImportPath": ""
-        },
-        {
-          "id": "yPwOyANSScb",
-          "name": "CompyPwOyAnsScb",
-          "componentImportPath": ""
-        },
-        {
-          "id": "p21OMa2gcnw",
-          "name": "Compp21OMa2Gcnw",
-          "componentImportPath": ""
-        },
-        {
-          "id": "M54vVTdVkn2",
-          "name": "CompM54VVTdVkn2",
-          "componentImportPath": ""
-        },
-        {
-          "id": "qYQ0AmZ9FQs",
-          "name": "CompqYq0AmZ9FQs",
-          "componentImportPath": ""
+          "name": "ConnectDisconnect",
+          "componentImportPath": "lido-plasmic/plasmic-provider/components"
         },
         {
           "id": "ehgcCPxh5-",
-          "name": "CompehgcCPxh5",
-          "componentImportPath": ""
+          "name": "ThemeProvider",
+          "componentImportPath": "lido-plasmic/plasmic-provider/components"
         },
         {
-          "id": "zFLVWDvu4L",
-          "name": "CompzFlvwDvu4L",
-          "componentImportPath": ""
+          "id": "VGO5fUF8pX",
+          "name": "Accordion",
+          "componentImportPath": "@lidofinance/lido-ui"
         },
         {
-          "id": "NyQYBs8yyG",
-          "name": "CompNyQyBs8YyG",
-          "componentImportPath": ""
+          "id": "EgNHzY3jXy",
+          "name": "button",
+          "componentImportPath": "@lidofinance/lido-ui"
         },
         {
-          "id": "wArwe5apNv",
-          "name": "CompwArwe5ApNv",
-          "componentImportPath": ""
+          "id": "w8P3mncBLU",
+          "name": "Chip",
+          "componentImportPath": "@lidofinance/lido-ui"
+        },
+        {
+          "id": "kWFYfB7cof",
+          "name": "Checkbox",
+          "componentImportPath": "@lidofinance/lido-ui"
+        },
+        {
+          "id": "bNUgP_oZfy",
+          "name": "Divider",
+          "componentImportPath": "@lidofinance/lido-ui"
+        },
+        {
+          "id": "qnzG0KNCzHQ",
+          "name": "Heading",
+          "componentImportPath": "@lidofinance/lido-ui"
+        },
+        {
+          "id": "pPC02cvMHA4",
+          "name": "Identicon",
+          "componentImportPath": "@lidofinance/lido-ui"
+        },
+        {
+          "id": "ssaw1Wa_H4k",
+          "name": "LidoLogo",
+          "componentImportPath": "@lidofinance/lido-ui"
+        },
+        {
+          "id": "M7_FZTRKOhB",
+          "name": "InlineLoader",
+          "componentImportPath": "@lidofinance/lido-ui"
+        },
+        {
+          "id": "KMpj3wYeD_P",
+          "name": "Loader",
+          "componentImportPath": "@lidofinance/lido-ui"
+        },
+        {
+          "id": "isBoVj6C78J",
+          "name": "MainMenu",
+          "componentImportPath": "@lidofinance/lido-ui"
+        },
+        {
+          "id": "4T-PE3616rj",
+          "name": "AddressBadge",
+          "componentImportPath": "@lidofinance/lido-ui"
+        },
+        {
+          "id": "uqw3dmTd3uJ",
+          "name": "Table",
+          "componentImportPath": "@lidofinance/lido-ui"
+        },
+        {
+          "id": "Vzr34dBwYRK",
+          "name": "WalletCard",
+          "componentImportPath": "@lidofinance/ui-primitives"
+        },
+        {
+          "id": "md-3G2GwYZl",
+          "name": "WalletCardAccount",
+          "componentImportPath": "@lidofinance/ui-primitives"
+        },
+        {
+          "id": "EG8uSRtl4Yf",
+          "name": "WalletCardBalance",
+          "componentImportPath": "@lidofinance/ui-primitives"
+        },
+        {
+          "id": "zn3ePEWiAgv",
+          "name": "Icon",
+          "componentImportPath": "lido-plasmic/plasmic-provider/components"
+        },
+        {
+          "id": "0WxDuyqFa3y",
+          "name": "Address",
+          "componentImportPath": "lido-plasmic/plasmic-provider/components"
+        },
+        {
+          "id": "wFzKexUD_xN",
+          "name": "ReefKnotProvider",
+          "componentImportPath": "lido-plasmic/plasmic-provider/components"
         }
       ]
     }

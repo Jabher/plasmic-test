@@ -1,10 +1,11 @@
 import "../styles/globals.css";
+import "../components/plasmic/plasmic__default_style.module.css";
 import type { AppProps } from "next/app";
-import { registerPlasmic } from "../plasmic-provider";
+import { setupPlasmic } from "../plasmic-provider";
 import { PLASMIC } from "../plasmic-provider/plasmic";
 
-registerPlasmic(PLASMIC);
+setupPlasmic(PLASMIC);
 // eslint-disable-next-line react/display-name
-export default ({ Component, pageProps }: AppProps) => {
-  return <Component {...pageProps} />;
-}
+export default ({ Component, pageProps }: AppProps) => <div className="plasmic_default__all">
+  <Component {...pageProps} />
+</div>

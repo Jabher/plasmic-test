@@ -3,43 +3,49 @@ import { configureChains, createClient, useAccount, WagmiConfig } from "wagmi";
 import { publicProvider } from "wagmi/providers/public";
 import * as chains from "wagmi/chains";
 import { getConnectors } from "reef-knot/core-react";
-import type { NextJsPlasmicComponentLoader } from "@plasmicapp/loader-nextjs";
 import { DataProvider } from "@plasmicapp/loader-nextjs";
 import { ProviderWeb3 } from "reef-knot/web3-react";
 import { rpcUrls } from "./util/rpcUrls";
 
 const connectors = getConnectors({ rpc: rpcUrls });
 
-const emptyAccount = { address: undefined, isConnected: false, isConnecting: false, status: "disconnected", isDisconnected: true, isReconnecting: false }
-const WagmiIsomorphic: FC<PropsWithChildren<{ networks?: Array<keyof typeof chains> }>> = ({children, networks}) => {
-  if (typeof window !== undefined) {
-    return <Wagmi networks={networks}>
-      {children}
-    </Wagmi>
-  }
-  return <DataProvider
-    name="account"
-    data={emptyAccount}
-  >
-    {children}
-  </DataProvider>;
-}
+const emptyAccount = {
+  address: undefined,
+  isConnected: false,
+  isConnecting: false,
+  status: "disconnected",
+  isDisconnected: true,
+  isReconnecting: false
+};
+export const ReefKnotProvider = Object.assign(
+  ({ children, networks }: PropsWithChildren<{ networks?: Array<keyof typeof chains> }>) =>
+    typeof window !== undefined
+      ? <WagmiProvider networks={networks}>{children}</WagmiProvider>
+      : <DataProvider name="account" data={emptyAccount}>{children}</DataProvider>,
+  {
+    plasmicConfig: {
+      providesData: true,
+      props: {
+        network: {
+          type: "choice",
+          multiSelect: true,
+          options: Object.keys(chains)
+        }
+      }
+    } as const
+  });
+
+
 const WagmiDataProvider: FC<PropsWithChildren> = ({ children }) => {
   const { address, isConnected, isConnecting, status, isDisconnected, isReconnecting } = useAccount();
   return <DataProvider
     name="account"
     data={{ address, isConnected, isConnecting, status, isDisconnected, isReconnecting }}
-  >
-    {children}
-  </DataProvider>;
+  >{children}</DataProvider>;
 };
 
-
-export const Wagmi: FC<PropsWithChildren<{ networks?: Array<keyof typeof chains> }>> =
-  ({
-     children,
-     networks = []
-   }) => {
+const WagmiProvider: FC<PropsWithChildren<{ networks?: Array<keyof typeof chains> }>> =
+  ({ children, networks = [] }) => {
     if (networks.length === 0) {
       return <DataProvider name="account" data={emptyAccount}>{children}</DataProvider>;
     }
@@ -70,18 +76,3 @@ export const Wagmi: FC<PropsWithChildren<{ networks?: Array<keyof typeof chains>
       </ProviderWeb3>
     </WagmiConfig>;
   };
-
-// todo walletConnectProjectId prop
-export const registerWagmi = (plasmic: NextJsPlasmicComponentLoader) => {
-  plasmic.registerGlobalContext(WagmiIsomorphic, {
-    name: "Wagmi",
-    providesData: true,
-    props: {
-      network: {
-        type: "choice",
-        multiSelect: true,
-        options: Object.keys(chains)
-      }
-    }
-  });
-};

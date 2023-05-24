@@ -13,7 +13,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "paths": {
+      "lido-plasmic/plasmic-provider/*": ["./plasmic-provider/*"]
+    }
   },
   "include": ["next-env.d.ts", "**/*"],
   "exclude": ["node_modules"]
