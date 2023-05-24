@@ -51,6 +51,12 @@
     grid-column: 4;
   }
 }
+.text {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-width: 0;
+}
 .h1 {
   position: relative;
   width: 100%;
@@ -58,9 +64,22 @@
   margin-bottom: 32px;
   min-width: 0;
 }
-.text {
+.walletCard:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
   position: relative;
   width: 100%;
-  height: auto;
   min-width: 0;
+}
+.walletCardAccount:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  position: relative;
+  margin-right: 473px;
+  margin-bottom: 220px;
+}
+.walletCardBalance:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  position: relative;
 }
