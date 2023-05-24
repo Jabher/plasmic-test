@@ -1,0 +1,559 @@
+{
+  "props": [
+    {
+      "name": "accent",
+      "type": "color",
+      "value": "var(--lido-color-accent)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "x4lB7EQ9pkmg"
+      }
+    },
+    {
+      "name": "accentBorder",
+      "type": "color",
+      "value": "var(--lido-color-accentBorder)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "0K-or1-rg3lX"
+      }
+    },
+    {
+      "name": "accentBorderHover",
+      "type": "color",
+      "value": "var(--lido-color-accentBorderHover)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "N9fi8M4mX6A8"
+      }
+    },
+    {
+      "name": "accentContrast",
+      "type": "color",
+      "value": "var(--lido-color-accentContrast)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "eOD8oQyxZHlX"
+      }
+    },
+    {
+      "name": "accentContrastSecondary",
+      "type": "color",
+      "value": "var(--lido-color-accentContrastSecondary)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "2i5UQO18L1P5"
+      }
+    },
+    {
+      "name": "accentControlBg",
+      "type": "color",
+      "value": "var(--lido-color-accentControlBg)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "s7dOJLiPpbNH"
+      }
+    },
+    {
+      "name": "accentDarken",
+      "type": "color",
+      "value": "var(--lido-color-accentDarken)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "uk7P6_9GIsW7"
+      }
+    },
+    {
+      "name": "accentText",
+      "type": "color",
+      "value": "var(--lido-color-accentText)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "xu4kec7y6v_d"
+      }
+    },
+    {
+      "name": "background",
+      "type": "color",
+      "value": "var(--lido-color-background)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "P1KeXL8jwGn3"
+      }
+    },
+    {
+      "name": "backgroundDarken",
+      "type": "color",
+      "value": "var(--lido-color-backgroundDarken)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "NttNzxWlCGFU"
+      }
+    },
+    {
+      "name": "backgroundSecondary",
+      "type": "color",
+      "value": "var(--lido-color-backgroundSecondary)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "WoCZGLA3sbHl"
+      }
+    },
+    {
+      "name": "border",
+      "type": "color",
+      "value": "var(--lido-color-border)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "L9jWzvhc94Nv"
+      }
+    },
+    {
+      "name": "borderActive",
+      "type": "color",
+      "value": "var(--lido-color-borderActive)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "cSYiMP7eOCvm"
+      }
+    },
+    {
+      "name": "borderHover",
+      "type": "color",
+      "value": "var(--lido-color-borderHover)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "ZPyh2WTIDAc5"
+      }
+    },
+    {
+      "name": "borderLight",
+      "type": "color",
+      "value": "var(--lido-color-borderLight)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "5Sp1884cqb48"
+      }
+    },
+    {
+      "name": "controlBg",
+      "type": "color",
+      "value": "var(--lido-color-controlBg)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "1UNqU2PEUZ2b"
+      }
+    },
+    {
+      "name": "darkDisplay",
+      "type": "color",
+      "value": "var(--lido-color-darkDisplay)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "jPYHKxBiHAfe"
+      }
+    },
+    {
+      "name": "darkModeVisibility",
+      "type": "color",
+      "value": "var(--lido-color-darkModeVisibility)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "NoXN12S5qtFc"
+      }
+    },
+    {
+      "name": "error",
+      "type": "color",
+      "value": "var(--lido-color-error)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "iKckL8BfRprm"
+      }
+    },
+    {
+      "name": "errorContrast",
+      "type": "color",
+      "value": "var(--lido-color-errorContrast)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "WASOjV9iWRyf"
+      }
+    },
+    {
+      "name": "errorHover",
+      "type": "color",
+      "value": "var(--lido-color-errorHover)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "jRqDLCPWjN1d"
+      }
+    },
+    {
+      "name": "foreground",
+      "type": "color",
+      "value": "var(--lido-color-foreground)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "ONKyaT8OqTEP"
+      }
+    },
+    {
+      "name": "lg",
+      "type": "fontsize",
+      "value": "20px",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "4GeKQo1jmQu5"
+      }
+    },
+    {
+      "name": "lightDisplay",
+      "type": "color",
+      "value": "var(--lido-color-lightDisplay)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "KW7BZo4DVIpm"
+      }
+    },
+    {
+      "name": "lightModeVisibility",
+      "type": "color",
+      "value": "var(--lido-color-lightModeVisibility)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "rE-oSsV32jYF"
+      }
+    },
+    {
+      "name": "md",
+      "type": "fontsize",
+      "value": "18px",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "gIC7ECXCBLP8"
+      }
+    },
+    {
+      "name": "overlay",
+      "type": "color",
+      "value": "var(--lido-color-overlay)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "evldGwhPOiOO"
+      }
+    },
+    {
+      "name": "popupMenuItemBgActiveHover",
+      "type": "color",
+      "value": "var(--lido-color-popupMenuItemBgActiveHover)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "LumK1MvTYhx_"
+      }
+    },
+    {
+      "name": "primary",
+      "type": "color",
+      "value": "var(--lido-color-primary)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "i688rgnegNc9"
+      }
+    },
+    {
+      "name": "primaryContrast",
+      "type": "color",
+      "value": "var(--lido-color-primaryContrast)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "BQc3QFpbS8z0"
+      }
+    },
+    {
+      "name": "primaryHover",
+      "type": "color",
+      "value": "var(--lido-color-primaryHover)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "2Wo0ozJYUEmW"
+      }
+    },
+    {
+      "name": "primaryVisited",
+      "type": "color",
+      "value": "var(--lido-color-primaryVisited)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "yNJCWNQKlrbX"
+      }
+    },
+    {
+      "name": "secondary",
+      "type": "color",
+      "value": "var(--lido-color-secondary)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "UOq4c0vyUUK0"
+      }
+    },
+    {
+      "name": "secondaryContrast",
+      "type": "color",
+      "value": "var(--lido-color-secondaryContrast)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "4jgn_EV7JWBT"
+      }
+    },
+    {
+      "name": "secondaryHover",
+      "type": "color",
+      "value": "var(--lido-color-secondaryHover)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "WlE03po-rP6S"
+      }
+    },
+    {
+      "name": "shadowDark",
+      "type": "color",
+      "value": "var(--lido-color-shadowDark)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "EPPcrSqOVxMk"
+      }
+    },
+    {
+      "name": "shadowLight",
+      "type": "color",
+      "value": "var(--lido-color-shadowLight)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "2EUdWS0ylOaE"
+      }
+    },
+    {
+      "name": "sm",
+      "type": "fontsize",
+      "value": "16px",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "DrnYR-4VUM-c"
+      }
+    },
+    {
+      "name": "success",
+      "type": "color",
+      "value": "var(--lido-color-success)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "rQID_naEz8jz"
+      }
+    },
+    {
+      "name": "successContrast",
+      "type": "color",
+      "value": "var(--lido-color-successContrast)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "dnLQ9uuZ6AbY"
+      }
+    },
+    {
+      "name": "successHover",
+      "type": "color",
+      "value": "var(--lido-color-successHover)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "FJBT0QAh49c2"
+      }
+    },
+    {
+      "name": "text",
+      "type": "color",
+      "value": "var(--lido-color-text)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "cRYBclndDY32"
+      }
+    },
+    {
+      "name": "textDark",
+      "type": "color",
+      "value": "var(--lido-color-textDark)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "UChHyVvn43nr"
+      }
+    },
+    {
+      "name": "textSecondary",
+      "type": "color",
+      "value": "var(--lido-color-textSecondary)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "XO1SAjcEUaFT"
+      }
+    },
+    {
+      "name": "warning",
+      "type": "color",
+      "value": "var(--lido-color-warning)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "3sZmEBajzDtF"
+      }
+    },
+    {
+      "name": "warningBackground",
+      "type": "color",
+      "value": "var(--lido-color-warningBackground)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "zN3yAaoUKAHZ"
+      }
+    },
+    {
+      "name": "warningContrast",
+      "type": "color",
+      "value": "var(--lido-color-warningContrast)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "w07wKdGV0Q-X"
+      }
+    },
+    {
+      "name": "warningHover",
+      "type": "color",
+      "value": "var(--lido-color-warningHover)",
+      "category": "color",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "mutMHGfSLjnO"
+      }
+    },
+    {
+      "name": "xl",
+      "type": "fontsize",
+      "value": "26px",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "U7uvgoIFDK66"
+      }
+    },
+    {
+      "name": "xs",
+      "type": "fontsize",
+      "value": "14px",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "JBBfxTF5xXfW"
+      }
+    },
+    {
+      "name": "xxl",
+      "type": "fontsize",
+      "value": "32px",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "DhIhZ_qWsv_H"
+      }
+    },
+    {
+      "name": "xxs",
+      "type": "fontsize",
+      "value": "12px",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "DkFGEMuR04QK"
+      }
+    },
+    {
+      "name": "xxxl",
+      "type": "fontsize",
+      "value": "40px",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "V9EIyfCZS4l3"
+      }
+    },
+    {
+      "name": "xxxs",
+      "type": "fontsize",
+      "value": "10px",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "fp_oI0CCh6H0"
+      }
+    },
+    {
+      "name": "xxxxl",
+      "type": "fontsize",
+      "value": "50px",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "w63X2LqEPLNaKe4vMByZM4",
+        "id": "Z1dDn_WVjnsl"
+      }
+    }
+  ],
+  "global": {
+    "meta": {
+      "source": "plasmic.app"
+    }
+  }
+}
