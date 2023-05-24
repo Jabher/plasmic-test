@@ -36,6 +36,7 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
+import { WalletCard } from "@lidofinance/ui-primitives"; // plasmic-import: Vzr34dBwYRK/codeComponent
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -54,8 +55,9 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 export type PlasmicHomepage__OverridesType = {
   root?: p.Flex<"div">;
   section?: p.Flex<"section">;
-  h1?: p.Flex<"h1">;
   text?: p.Flex<"div">;
+  h1?: p.Flex<"h1">;
+  walletCard?: p.Flex<typeof WalletCard>;
 };
 
 export interface DefaultHomepageProps {}
@@ -126,18 +128,6 @@ function PlasmicHomepage__RenderFunc(props: {
             data-plasmic-override={overrides.section}
             className={classNames(projectcss.all, sty.section)}
           >
-            <h1
-              data-plasmic-name={"h1"}
-              data-plasmic-override={overrides.h1}
-              className={classNames(
-                projectcss.all,
-                projectcss.h1,
-                projectcss.__wab_text,
-                sty.h1
-              )}
-            >
-              {"Welcome to your first page."}
-            </h1>
             <div
               data-plasmic-name={"text"}
               data-plasmic-override={overrides.text}
@@ -166,7 +156,24 @@ function PlasmicHomepage__RenderFunc(props: {
                 </React.Fragment>
               </React.Fragment>
             </div>
+            <h1
+              data-plasmic-name={"h1"}
+              data-plasmic-override={overrides.h1}
+              className={classNames(
+                projectcss.all,
+                projectcss.h1,
+                projectcss.__wab_text,
+                sty.h1
+              )}
+            >
+              {"Welcome to your first page."}
+            </h1>
           </section>
+          <WalletCard
+            data-plasmic-name={"walletCard"}
+            data-plasmic-override={overrides.walletCard}
+            className={classNames("__wab_instance", sty.walletCard)}
+          />
         </div>
       </div>
     </React.Fragment>
@@ -174,10 +181,11 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "section", "h1", "text"],
-  section: ["section", "h1", "text"],
+  root: ["root", "section", "text", "h1", "walletCard"],
+  section: ["section", "text", "h1"],
+  text: ["text"],
   h1: ["h1"],
-  text: ["text"]
+  walletCard: ["walletCard"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -185,8 +193,9 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   section: "section";
-  h1: "h1";
   text: "div";
+  h1: "h1";
+  walletCard: typeof WalletCard;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -250,8 +259,9 @@ export const PlasmicHomepage = Object.assign(
   {
     // Helper components rendering sub-elements
     section: makeNodeComponent("section"),
-    h1: makeNodeComponent("h1"),
     text: makeNodeComponent("text"),
+    h1: makeNodeComponent("h1"),
+    walletCard: makeNodeComponent("walletCard"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
