@@ -1,3 +1,18 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "extends": [
+    "@lidofinance",
+    "prettier"
+  ],
+  "rules": {
+    "import/namespace": "off",
+    "react/no-unknown-property": [
+      2,
+      {
+        "ignore": [
+          "jsx"
+        ]
+      }
+    ]
+  }
 }
