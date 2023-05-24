@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope%3Aital%2Cwght%400%2C400%3B0%2C600%3B0%2C700&family=Inconsolata%3Aital%2Cwght%400%2C400%3B0%2C600%3B0%2C700&display=swap");
 
+/*noinspection CssUnresolvedCustomProperty*/
 .plasmic_tokens {
   --token-rE-oSsV32jYF: var(--lido-color-lightModeVisibility);
   --plasmic-token-light-mode-visibility: var(--token-rE-oSsV32jYF);
