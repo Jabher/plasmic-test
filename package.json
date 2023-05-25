@@ -18,6 +18,7 @@
     "@plasmicapp/react-web": "^0.2.219",
     "@reef-knot/wallets-helpers": "^1.0.1",
     "@swc/helpers": "^0.5.1",
+    "eslint-plugin-typescript-sort-keys": "^2.3.0",
     "ethers": "^5.7.2",
     "next": "13.2.4",
     "react": "18.2.0",
@@ -25,6 +26,9 @@
     "react-is": "^18.2.0",
     "reef-knot": "1.2.0",
     "styled-components": "^5.3.10",
+    "stylelint": "^15.6.2",
+    "stylelint-config-standard": "^33.0.0",
+    "stylelint-order": "^6.0.3",
     "wagmi": "0.11.7"
   },
   "devDependencies": {
@@ -50,6 +54,8 @@
     "eslint-plugin-sonarjs": "^0.19.0",
     "eslint-plugin-unicorn": "^47.0.0",
     "prettier": "^2.8.8",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-group-selectors": "^1.0.9",
     "typescript": "^5.0.4"
   }
 }

@@ -1,5 +1,6 @@
 import type { NextJsPlasmicComponentLoader } from "@plasmicapp/loader-nextjs";
 import * as ui from "@lidofinance/lido-ui";
+import * as primitives from "@lidofinance/ui-primitives"
 import { themeLight } from "@lidofinance/lido-ui";
 import { choice, range } from "./util/types";
 
@@ -43,12 +44,12 @@ export const registerLidoUi = (plasmic: NextJsPlasmicComponentLoader) => {
       props
     });
   };
-  const registerPrimitive = (pkg: string, title: string, props: unknown = {}) => {
+  const registerPrimitive = (title: string, props: unknown = {}) => {
     //@ts-expect-error I hate plasmic
-    plasmic.registerComponent(ui[title], {
-      name: `${pkg}#${title}`,
+    plasmic.registerComponent(primitives[title], {
+      name: `@lidofinance/ui-primitives#${title}`,
       displayName: title,
-      importPath: pkg,
+      importPath: "@lidofinance/ui-primitives",
       importName: title,
       props
     });
@@ -121,18 +122,18 @@ export const registerLidoUi = (plasmic: NextJsPlasmicComponentLoader) => {
     align: choice`left|center|right`
   });
 
-  registerPrimitive("@lidofinance/ui-primitives", "WalletCard", {
+  registerPrimitive("WalletCard", {
     children: "slot"
   });
 
-  registerPrimitive("@lidofinance/ui-primitives", "WalletCardAccount", {
+  registerPrimitive("WalletCardAccount", {
     children: "slot",
     account: {
       type: "string"
     }
   });
 
-  registerPrimitive("@lidofinance/ui-primitives", "WalletCardBalance", {
+  registerPrimitive("WalletCardBalance", {
     children: "slot",
     title: {
       type: "string"

@@ -4,6 +4,7 @@
     "@lidofinance",
     "prettier"
   ],
+  "plugins": ["typescript-sort-keys"],
   "rules": {
     "import/namespace": "off",
     "react/no-unknown-property": [
