@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint --fix . && stylelint --fix **/*.css"
   },
   "dependencies": {
     "@lidofinance/eth-ui-primitives": "^0.24.0",
