@@ -1403,10 +1403,10 @@
     tiny-glob "^0.2.9"
     tslib "^2.4.0"
 
-"@plasmicapp/cli@^0.1.284":
-  version "0.1.284"
-  resolved "https://registry.yarnpkg.com/@plasmicapp/cli/-/cli-0.1.284.tgz#d5bf8dff8cd697b094406bd42591c2245f9763c0"
-  integrity sha512-8ag0wA/4Mes7/BmXbfg4rq3mhEPFUaVRgWiG7Vkdg7+1MZ7dxu1FIXWX+YiWeF+9YJ4/uHoA0cbd8QAITdOX+w==
+"@plasmicapp/cli@^0.1.285":
+  version "0.1.285"
+  resolved "https://registry.yarnpkg.com/@plasmicapp/cli/-/cli-0.1.285.tgz#c0bae33f15b63fb786732c9c955e0215626496df"
+  integrity sha512-rupDHTACB996TpPHcF1Ay++qrToUvvs8QxTPBwLqCna8f2cAOTPbD9+ZMQArq7EsRXs4WWcQJ0Ld69a7d+PgiQ==
   dependencies:
     "@babel/core" "^7.12.3"
     "@babel/generator" "^7.12.1"
