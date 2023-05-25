@@ -13,7 +13,7 @@
     "@lidofinance/lido-ui": "^3.6.1",
     "@lidofinance/next-pages": "^0.25.0",
     "@lidofinance/ui-primitives": "^0.24.0",
-    "@plasmicapp/cli": "^0.1.284",
+    "@plasmicapp/cli": "^0.1.285",
     "@plasmicapp/loader-nextjs": "^1.0.265",
     "@plasmicapp/react-web": "^0.2.219",
     "@reef-knot/wallets-helpers": "^1.0.1",
