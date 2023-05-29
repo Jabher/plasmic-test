@@ -3,8 +3,9 @@ import { useDisconnect } from "reef-knot/web3-react";
 import { WalletsModalForEth } from "reef-knot/connect-wallet-modal";
 import { useState } from "react";
 import { useAccount } from "wagmi";
+import dynamic from "next/dynamic";
 
-export const ConnectDisconnect = () => {
+const ConnectDisconnectClient = () => {
   const [opened, setOpened] = useState(false);
   const { disconnect } = useDisconnect();
   const { isConnected } = useAccount();
@@ -37,4 +38,4 @@ export const ConnectDisconnect = () => {
   );
 };
 
-
+export const ConnectDisconnect = dynamic(() => Promise.resolve(ConnectDisconnectClient), {ssr: false})

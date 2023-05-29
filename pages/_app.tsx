@@ -5,7 +5,7 @@ import { setupPlasmic } from "../plasmic-provider";
 import { PLASMIC } from "../plasmic-provider/plasmic";
 
 setupPlasmic(PLASMIC);
-// eslint-disable-next-line react/display-name
-export default ({ Component, pageProps }: AppProps) => <div className="plasmic_default__all">
-  <Component {...pageProps} />
-</div>
+export default Object.assign(
+  ({ Component, pageProps }: AppProps) => <Component {...pageProps} />,
+  {displayName: 'App'}
+)

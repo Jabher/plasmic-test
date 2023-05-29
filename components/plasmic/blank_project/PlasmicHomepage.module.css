@@ -1,6 +1,12 @@
 .root {
-  position: relative;
   display: grid;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  align-content: flex-start;
+  justify-items: center;
+  min-width: 0;
+  min-height: 0;
   grid-template-columns:
     1fr minmax(0, var(--plsmc-wide-chunk)) var(--plsmc-viewport-gap)
     min(
@@ -8,30 +14,26 @@
       calc(100% - var(--plsmc-viewport-gap) - var(--plsmc-viewport-gap))
     )
     var(--plsmc-viewport-gap) minmax(0, var(--plsmc-wide-chunk)) 1fr;
-  align-content: flex-start;
-  justify-items: center;
-  width: 100%;
-  min-width: 0;
-  height: 100%;
-  min-height: 0;
-  padding: 0;
+  padding: 0px;
 }
-
 :where(.root > *) {
   grid-column: 4;
 }
-
-@media (width >= 0) and (width <= 768px) {
+@media (min-width: 0px) and (max-width: 768px) {
   :where(.root > *) {
     grid-column: 4;
   }
 }
-
 .section {
-  position: relative;
   display: grid;
+  position: relative;
+  width: 100%;
+  height: auto;
   grid-row-gap: 16px;
-  grid-column: 1 -1;
+  align-content: flex-start;
+  justify-items: center;
+  grid-column-start: 1;
+  grid-column-end: -1;
   grid-template-columns:
     1fr minmax(0, var(--plsmc-wide-chunk)) var(--plsmc-viewport-gap)
     min(
@@ -39,34 +41,31 @@
       calc(100% - var(--plsmc-viewport-gap) - var(--plsmc-viewport-gap))
     )
     var(--plsmc-viewport-gap) minmax(0, var(--plsmc-wide-chunk)) 1fr;
-  align-content: flex-start;
-  justify-items: center;
-  width: 100%;
-  height: auto;
-  padding: 96px 0;
+  padding: 96px 0px;
 }
-
 :where(.section > *) {
   grid-column: 4;
 }
-
-@media (width >= 0) and (width <= 768px) {
+@media (min-width: 0px) and (max-width: 768px) {
   :where(.section > *) {
     grid-column: 4;
   }
 }
-
-.h1 {
-  position: relative;
-  width: 100%;
-  min-width: 0;
-  height: auto;
-  margin-bottom: 32px;
-}
-
 .text {
   position: relative;
   width: 100%;
-  min-width: 0;
   height: auto;
+  min-width: 0;
+}
+.h1 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-bottom: 32px;
+  min-width: 0;
+}
+.connectDisconnect:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  position: relative;
 }

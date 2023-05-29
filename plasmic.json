@@ -50,116 +50,139 @@
         {
           "id": "2AEWq6DaOoW1i",
           "name": "PlasmicHead",
+          "displayName": "hostless-plasmic-head",
           "componentImportPath": "@plasmicapp/react-web"
         },
         {
           "id": "kAPLTCGzwMAjO",
           "name": "Fetcher",
+          "displayName": "plasmic-data-source-fetcher",
           "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
         },
         {
           "id": "bXU3BFjMmK",
           "name": "ConnectDisconnect",
+          "displayName": "ReefKnot/ConnectDisconnect",
           "componentImportPath": "lido-plasmic/plasmic-provider/components"
         },
         {
           "id": "ehgcCPxh5-",
           "name": "ThemeProvider",
+          "displayName": "Theme",
           "componentImportPath": "lido-plasmic/plasmic-provider/components"
         },
         {
           "id": "VGO5fUF8pX",
           "name": "Accordion",
+          "displayName": "@lidofinance/lido-ui#Accordion",
           "componentImportPath": "@lidofinance/lido-ui"
         },
         {
           "id": "EgNHzY3jXy",
           "name": "button",
+          "displayName": "@lidofinance/lido-ui#button",
           "componentImportPath": "@lidofinance/lido-ui"
         },
         {
           "id": "w8P3mncBLU",
           "name": "Chip",
+          "displayName": "@lidofinance/lido-ui#Chip",
           "componentImportPath": "@lidofinance/lido-ui"
         },
         {
           "id": "kWFYfB7cof",
           "name": "Checkbox",
+          "displayName": "@lidofinance/lido-ui#Checkbox",
           "componentImportPath": "@lidofinance/lido-ui"
         },
         {
           "id": "bNUgP_oZfy",
           "name": "Divider",
+          "displayName": "@lidofinance/lido-ui#Divider",
           "componentImportPath": "@lidofinance/lido-ui"
         },
         {
           "id": "qnzG0KNCzHQ",
           "name": "Heading",
+          "displayName": "@lidofinance/lido-ui#Heading",
           "componentImportPath": "@lidofinance/lido-ui"
         },
         {
           "id": "pPC02cvMHA4",
           "name": "Identicon",
+          "displayName": "@lidofinance/lido-ui#Identicon",
           "componentImportPath": "@lidofinance/lido-ui"
         },
         {
           "id": "ssaw1Wa_H4k",
           "name": "LidoLogo",
+          "displayName": "@lidofinance/lido-ui#LidoLogo",
           "componentImportPath": "@lidofinance/lido-ui"
         },
         {
           "id": "M7_FZTRKOhB",
           "name": "InlineLoader",
+          "displayName": "@lidofinance/lido-ui#InlineLoader",
           "componentImportPath": "@lidofinance/lido-ui"
         },
         {
           "id": "KMpj3wYeD_P",
           "name": "Loader",
+          "displayName": "@lidofinance/lido-ui#Loader",
           "componentImportPath": "@lidofinance/lido-ui"
         },
         {
           "id": "isBoVj6C78J",
           "name": "MainMenu",
+          "displayName": "@lidofinance/lido-ui#MainMenu",
           "componentImportPath": "@lidofinance/lido-ui"
         },
         {
           "id": "4T-PE3616rj",
           "name": "AddressBadge",
+          "displayName": "@lidofinance/lido-ui#AddressBadge",
           "componentImportPath": "@lidofinance/lido-ui"
         },
         {
           "id": "uqw3dmTd3uJ",
           "name": "Table",
+          "displayName": "@lidofinance/lido-ui#Table",
           "componentImportPath": "@lidofinance/lido-ui"
         },
         {
           "id": "Vzr34dBwYRK",
           "name": "WalletCard",
+          "displayName": "@lidofinance/ui-primitives#WalletCard",
           "componentImportPath": "@lidofinance/ui-primitives"
         },
         {
           "id": "md-3G2GwYZl",
           "name": "WalletCardAccount",
+          "displayName": "@lidofinance/ui-primitives#WalletCardAccount",
           "componentImportPath": "@lidofinance/ui-primitives"
         },
         {
           "id": "EG8uSRtl4Yf",
           "name": "WalletCardBalance",
+          "displayName": "@lidofinance/ui-primitives#WalletCardBalance",
           "componentImportPath": "@lidofinance/ui-primitives"
         },
         {
           "id": "zn3ePEWiAgv",
           "name": "Icon",
+          "displayName": "@lidofinance/lido-ui/Icon",
           "componentImportPath": "lido-plasmic/plasmic-provider/components"
         },
         {
           "id": "0WxDuyqFa3y",
           "name": "Address",
+          "displayName": "@lidofinance/lido-ui/Address",
           "componentImportPath": "lido-plasmic/plasmic-provider/components"
         },
         {
           "id": "wFzKexUD_xN",
           "name": "ReefKnotProvider",
+          "displayName": "ReefKnot",
           "componentImportPath": "lido-plasmic/plasmic-provider/components"
         }
       ]
@@ -179,6 +202,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.284",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.284/dist/plasmic.schema.json"
+  "cliVersion": "0.1.286",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.286/dist/plasmic.schema.json"
 }

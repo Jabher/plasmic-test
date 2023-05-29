@@ -18,9 +18,9 @@ const emptyAccount = {
   isReconnecting: false
 };
 export const ReefKnotProvider = Object.assign(
-  ({ children, networks }: PropsWithChildren<{ networks?: Array<keyof typeof chains> }>) =>
+  ({ children, network }: PropsWithChildren<{ network?: Array<keyof typeof chains> }>) =>
     typeof window !== undefined
-      ? <WagmiProvider networks={networks}>{children}</WagmiProvider>
+      ? <WagmiProvider network={network}>{children}</WagmiProvider>
       : <DataProvider name="account" data={emptyAccount}>{children}</DataProvider>,
   {
     plasmicConfig: {
@@ -44,13 +44,13 @@ const WagmiDataProvider: FC<PropsWithChildren> = ({ children }) => {
   >{children}</DataProvider>;
 };
 
-const WagmiProvider: FC<PropsWithChildren<{ networks?: Array<keyof typeof chains> }>> =
-  ({ children, networks = [] }) => {
-    if (networks.length === 0) {
+const WagmiProvider: FC<PropsWithChildren<{ network?: Array<keyof typeof chains> }>> =
+  ({ children, network = [] }) => {
+    if (network.length === 0) {
       return <DataProvider name="account" data={emptyAccount}>{children}</DataProvider>;
     }
 
-    const networkConfigs = networks.map(n => chains[n]);
+    const networkConfigs = network.map(n => chains[n]);
 
     const client = createClient({
       connectors,

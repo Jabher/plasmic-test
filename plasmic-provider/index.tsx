@@ -2,7 +2,12 @@ import type { NextJsPlasmicComponentLoader } from "@plasmicapp/loader-nextjs";
 import { ReefKnotProvider, ConnectDisconnect, Icon, Address, ThemeProvider } from "./components";
 import { registerLidoUi } from "./registerLidoUi";
 
+let initialized = false
 export const setupPlasmic = (plasmic: NextJsPlasmicComponentLoader) => {
+  if (initialized) {
+    return;
+  }
+  initialized = true;
   registerLidoUi(plasmic);
   plasmic.registerGlobalContext(ThemeProvider, {
     name: "Theme",
