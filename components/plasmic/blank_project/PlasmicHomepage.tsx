@@ -553,7 +553,9 @@ function PlasmicHomepage__RenderFunc(props: {
                 address={"0x655F2166b0709cd575202630952D71E2bB0d61Af" as const}
                 arg1={(() => {
                   try {
-                    return $state.numberInput.value;
+                    return (
+                      ($state.numberInput.value ?? 0) + "000000000000000000"
+                    );
                   } catch (e) {
                     if (
                       e instanceof TypeError ||
