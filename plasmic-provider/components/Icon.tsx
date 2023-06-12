@@ -1,4 +1,17 @@
+import { NextJsPlasmicComponentLoader } from "@plasmicapp/loader-nextjs";
 import * as ui from "@lidofinance/lido-ui";
+export const registerIconComponent = (plasmic: NextJsPlasmicComponentLoader) => {
+  plasmic.registerComponent(Icon, {
+    name: "@lidofinance/lido-ui/Icon",
+    displayName: "Icon",
+    importName: 'Icon',
+    importPath: 'lido-plasmic/plasmic-provider/components',
+    props: {
+      color: { type: "color" },
+      type: { type: "choice", options: icons }
+    }
+  });
+}
 
 const icons: Array<keyof typeof ui> = [
   "Ambire",
@@ -86,20 +99,13 @@ const icons: Array<keyof typeof ui> = [
   "Zengo"
 ];
 
-export const Icon = Object.assign(
-  ({ color, type }: { color?: string; type: typeof icons[number] }) => {
-    // eslint-disable-next-line import/namespace
-    const Component = ui[type];
+export const Icon = ({ color, type }: { color?: string; type: typeof icons[number] }) => {
+  // eslint-disable-next-line import/namespace
+  const Component = ui[type];
 
-    return <Component style={{ fill: color || `currentcolor` }} />;
-  },
-  {
-    plasmicConfig: {
-      props: {
-        color: { type: "color" },
-        type: { type: "choice", options: icons }
-      }
-    } as const
+  if (!Component) {
+    return null;
   }
-)
-
+  // @ts-expect-error bad types
+  return <Component style={{ fill: color || `currentcolor` }} />;
+}

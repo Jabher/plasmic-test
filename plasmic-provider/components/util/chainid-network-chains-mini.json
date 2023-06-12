@@ -10,8 +10,8 @@
       "decimals": 18
     },
     "rpc": [
-      "https://mainnet.infura.io/v3/${INFURA_API_KEY}",
-      "wss://mainnet.infura.io/ws/v3/${INFURA_API_KEY}",
+      "https://mainnet.infura.io/v3/721fe65bb9cf453da7c4739bc9d1ef9b",
+      "wss://mainnet.infura.io/ws/v3/721fe65bb9cf453da7c4739bc9d1ef9b",
       "https://api.mycryptoapi.com/eth",
       "https://cloudflare-eth.com",
       "https://ethereum.publicnode.com"
@@ -46,8 +46,8 @@
       "decimals": 18
     },
     "rpc": [
-      "https://ropsten.infura.io/v3/${INFURA_API_KEY}",
-      "wss://ropsten.infura.io/ws/v3/${INFURA_API_KEY}"
+      "https://ropsten.infura.io/v3/721fe65bb9cf453da7c4739bc9d1ef9b",
+      "wss://ropsten.infura.io/ws/v3/721fe65bb9cf453da7c4739bc9d1ef9b"
     ],
     "faucets": [
       "http://fauceth.komputing.org?chain=3&address=${ADDRESS}",
@@ -66,8 +66,8 @@
       "decimals": 18
     },
     "rpc": [
-      "https://rinkeby.infura.io/v3/${INFURA_API_KEY}",
-      "wss://rinkeby.infura.io/ws/v3/${INFURA_API_KEY}"
+      "https://rinkeby.infura.io/v3/721fe65bb9cf453da7c4739bc9d1ef9b",
+      "wss://rinkeby.infura.io/ws/v3/721fe65bb9cf453da7c4739bc9d1ef9b"
     ],
     "faucets": [
       "http://fauceth.komputing.org?chain=4&address=${ADDRESS}",
@@ -86,9 +86,9 @@
       "decimals": 18
     },
     "rpc": [
-      "https://goerli.infura.io/v3/${INFURA_API_KEY}",
-      "wss://goerli.infura.io/v3/${INFURA_API_KEY}",
-      "https://rpc.goerli.mudit.blog/"
+      "https://goerli.infura.io/v3/721fe65bb9cf453da7c4739bc9d1ef9b",
+      "wss://goerli.infura.io/v3/721fe65bb9cf453da7c4739bc9d1ef9b",
+      "https://eth-goerli.api.onfinality.io/public"
     ],
     "faucets": [
       "http://fauceth.komputing.org?chain=5&address=${ADDRESS}",
@@ -709,8 +709,8 @@
     "rpc": [
       "https://kovan.poa.network",
       "http://kovan.poa.network:8545",
-      "https://kovan.infura.io/v3/${INFURA_API_KEY}",
-      "wss://kovan.infura.io/ws/v3/${INFURA_API_KEY}",
+      "https://kovan.infura.io/v3/721fe65bb9cf453da7c4739bc9d1ef9b",
+      "wss://kovan.infura.io/ws/v3/721fe65bb9cf453da7c4739bc9d1ef9b",
       "ws://kovan.poa.network:8546"
     ],
     "faucets": [
@@ -10725,7 +10725,7 @@
       "decimals": 18
     },
     "rpc": [
-      "https://arbitrum-mainnet.infura.io/v3/${INFURA_API_KEY}",
+      "https://arbitrum-mainnet.infura.io/v3/721fe65bb9cf453da7c4739bc9d1ef9b",
       "https://arb-mainnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}",
       "https://arb1.arbitrum.io/rpc"
     ],
@@ -11181,8 +11181,8 @@
     "rpc": [
       "https://rpc.goerli.linea.build",
       "wss://rpc.goerli.linea.build",
-      "https://consensys-zkevm-goerli-prealpha.infura.io/v3/${INFURA_API_KEY}",
-      "wss://consensys-zkevm-goerli-prealpha.infura.io/v3/${INFURA_API_KEY}"
+      "https://consensys-zkevm-goerli-prealpha.infura.io/v3/721fe65bb9cf453da7c4739bc9d1ef9b",
+      "wss://consensys-zkevm-goerli-prealpha.infura.io/v3/721fe65bb9cf453da7c4739bc9d1ef9b"
     ],
     "faucets": [
       "https://faucetlink.to/goerli"
@@ -14698,7 +14698,7 @@
       "decimals": 18
     },
     "rpc": [
-      "https://palm-testnet.infura.io/v3/${INFURA_API_KEY}"
+      "https://palm-testnet.infura.io/v3/721fe65bb9cf453da7c4739bc9d1ef9b"
     ],
     "faucets": [],
     "infoURL": "https://palm.io"
@@ -14714,7 +14714,7 @@
       "decimals": 18
     },
     "rpc": [
-      "https://palm-mainnet.infura.io/v3/${INFURA_API_KEY}"
+      "https://palm-mainnet.infura.io/v3/721fe65bb9cf453da7c4739bc9d1ef9b"
     ],
     "faucets": [],
     "infoURL": "https://palm.io"

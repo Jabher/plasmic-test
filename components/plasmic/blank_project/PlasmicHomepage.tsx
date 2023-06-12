@@ -36,10 +36,19 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants,
 } from "@plasmicapp/react-web";
+import { Button } from "@lidofinance/lido-ui"; // plasmic-import: do5jcQKQyQ/codeComponent
+import { Chip } from "@lidofinance/lido-ui"; // plasmic-import: w8P3mncBLU/codeComponent
+import { LidoLogo } from "@lidofinance/lido-ui"; // plasmic-import: ssaw1Wa_H4k/codeComponent
+import { Address } from "lido-plasmic/plasmic-provider/components"; // plasmic-import: 0WxDuyqFa3y/codeComponent
+import { Icon } from "lido-plasmic/plasmic-provider/components"; // plasmic-import: zn3ePEWiAgv/codeComponent
 import { ConnectDisconnect } from "lido-plasmic/plasmic-provider/components"; // plasmic-import: bXU3BFjMmK/codeComponent
+import { ContractValue } from "lido-plasmic/plasmic-provider/components"; // plasmic-import: KLFW_vI5b-/codeComponent
+import { AntdInputNumber } from "@plasmicpkgs/antd5/skinny/registerInput"; // plasmic-import: wxD5qjEe3pU/codeComponent
+import { ContractCallOnClick } from "lido-plasmic/plasmic-provider/components"; // plasmic-import: FMj5e5Fger/codeComponent
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
+import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic_blank_project.module.css"; // plasmic-import: w63X2LqEPLNaKe4vMByZM4/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: b7bxSA7yG57q/css
 
@@ -54,10 +63,13 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: p.Flex<"div">;
-  section?: p.Flex<"section">;
-  text?: p.Flex<"div">;
   h1?: p.Flex<"h1">;
+  lidoLogo?: p.Flex<typeof LidoLogo>;
+  address?: p.Flex<typeof Address>;
+  h6?: p.Flex<"h6">;
   connectDisconnect?: p.Flex<typeof ConnectDisconnect>;
+  contractValue?: p.Flex<typeof ContractValue>;
+  numberInput?: p.Flex<typeof AntdInputNumber>;
 };
 
 export interface DefaultHomepageProps {}
@@ -99,6 +111,33 @@ function PlasmicHomepage__RenderFunc(props: {
 
   const [$queries, setDollarQueries] = React.useState({});
 
+  const stateSpecs = React.useMemo(
+    () => [
+      {
+        path: "steth",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84" as const,
+      },
+      {
+        path: "stethGoerli",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          "0x82f418D75F836385092eB8EaBf1608cd4b91961c" as const,
+      },
+      {
+        path: "numberInput.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+      },
+    ],
+    [$props, $ctx]
+  );
+  const $state = p.useDollarState(stateSpecs, { $props, $ctx, $queries });
+
   return (
     <React.Fragment>
       <Head></Head>
@@ -121,56 +160,487 @@ function PlasmicHomepage__RenderFunc(props: {
             projectcss.plasmic_default_styles,
             projectcss.plasmic_mixins,
             projectcss.plasmic_tokens,
+            plasmic_antd_5_hostless_css.plasmic_tokens,
             sty.root
           )}
         >
-          <section
-            data-plasmic-name={"section"}
-            data-plasmic-override={overrides.section}
-            className={classNames(projectcss.all, sty.section)}
-          >
+          <section className={classNames(projectcss.all, sty.section__aSxD3)}>
             <div
-              data-plasmic-name={"text"}
-              data-plasmic-override={overrides.text}
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text
+                sty.text__uAmFf
               )}
             >
               <React.Fragment>
-                <React.Fragment>
-                  {
-                    "If you haven't already done so, go back and learn the basics by going through the Plasmic Levels tutorial.\n\nIt's always easier to start from examples! Add a new page using a template—do this from the list of pages in the top toolbar.\n\nOr press the big blue + button to start inserting items into this page.\n\nIntegrate this project into your codebase—press the "
-                  }
-                </React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ fontWeight: 700 }}
-                >
-                  {"Code"}
-                </span>
-                <React.Fragment>
-                  {
-                    " button in the top right and follow the quickstart instructions.\n\nJoin our Slack community (icon in bottom left) for help any time."
-                  }
-                </React.Fragment>
+                <React.Fragment>{""}</React.Fragment>
+                {
+                  <h1
+                    data-plasmic-name={"h1"}
+                    data-plasmic-override={overrides.h1}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h1,
+                      projectcss.__wab_text,
+                      sty.h1
+                    )}
+                  >
+                    {"Welcome to demo of Plasmic custom configuration"}
+                  </h1>
+                }
+                <React.Fragment>{""}</React.Fragment>
               </React.Fragment>
             </div>
-            <h1
-              data-plasmic-name={"h1"}
-              data-plasmic-override={overrides.h1}
+            <div
               className={classNames(
                 projectcss.all,
-                projectcss.h1,
                 projectcss.__wab_text,
-                sty.h1
+                sty.text__zDt90
               )}
             >
-              {"Welcome to your first page."}
-            </h1>
+              {"Let's start with simple things"}
+            </div>
           </section>
+          <section className={classNames(projectcss.all, sty.section__nQ7Y3)}>
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__kXfm5
+              )}
+            >
+              <React.Fragment>
+                <React.Fragment>{""}</React.Fragment>
+                {
+                  <h3
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h3,
+                      projectcss.__wab_text,
+                      sty.h3__rH0Fj
+                    )}
+                  >
+                    {
+                      "This is some of our UI kit elements available, have a look"
+                    }
+                  </h3>
+                }
+                <React.Fragment>{""}</React.Fragment>
+              </React.Fragment>
+            </div>
+            <p.Stack
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__vUqTk)}
+            >
+              <Button
+                className={classNames("__wab_instance", sty.button__t62VR)}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__c2SDz
+                  )}
+                >
+                  {"Just a button"}
+                </div>
+              </Button>
+              <Chip className={classNames("__wab_instance", sty.chip___5Pmc)}>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text___4CTj8
+                  )}
+                >
+                  {"some chips"}
+                </div>
+              </Chip>
+              <Chip
+                className={classNames("__wab_instance", sty.chip__eUq75)}
+                variant={"negative" as const}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__gifJl
+                  )}
+                >
+                  {"with different varians"}
+                </div>
+              </Chip>
+              <Chip
+                className={classNames("__wab_instance", sty.chip__ydn5K)}
+                variant={"warning" as const}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__j9Dgp
+                  )}
+                >
+                  {"like green, red and yellow"}
+                </div>
+              </Chip>
+              <LidoLogo
+                data-plasmic-name={"lidoLogo"}
+                data-plasmic-override={overrides.lidoLogo}
+                className={classNames("__wab_instance", sty.lidoLogo)}
+              />
 
+              <Address
+                data-plasmic-name={"address"}
+                data-plasmic-override={overrides.address}
+                className={classNames("__wab_instance", sty.address)}
+              />
+
+              <Icon
+                className={classNames("__wab_instance", sty.icon__kYdY9)}
+                type={"Ambire" as const}
+              />
+
+              <Icon
+                className={classNames("__wab_instance", sty.icon__cp3J3)}
+                type={"LedgerCircleInversion" as const}
+              />
+
+              <Icon
+                className={classNames("__wab_instance", sty.icon___6AVvc)}
+                type={"Coin98Circle" as const}
+              />
+
+              <Icon
+                className={classNames("__wab_instance", sty.icon__eZ96Z)}
+                type={"Exodus" as const}
+              />
+            </p.Stack>
+          </section>
+          <section className={classNames(projectcss.all, sty.section__hNfpv)}>
+            <div className={classNames(projectcss.all, sty.freeBox__sbrLo)}>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__trBje
+                )}
+              >
+                <React.Fragment>
+                  <React.Fragment>{""}</React.Fragment>
+                  {
+                    <h3
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h3,
+                        projectcss.__wab_text,
+                        sty.h3__cIl5Y
+                      )}
+                    >
+                      {"Now, about ReefKnot integration."}
+                    </h3>
+                  }
+                  <React.Fragment>{""}</React.Fragment>
+                  {
+                    <h6
+                      data-plasmic-name={"h6"}
+                      data-plasmic-override={overrides.h6}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h6,
+                        projectcss.__wab_text,
+                        sty.h6
+                      )}
+                    >
+                      {
+                        "Here we have a possibility to connect to wallets using our OSS solution, and interact with contracts easily.\n\nFor example, let's have a look on some test ERC20 contract on Goerli"
+                      }
+                    </h6>
+                  }
+                  <React.Fragment>{""}</React.Fragment>
+                </React.Fragment>
+              </div>
+              <ConnectDisconnect
+                data-plasmic-name={"connectDisconnect"}
+                data-plasmic-override={overrides.connectDisconnect}
+                className={classNames("__wab_instance", sty.connectDisconnect)}
+              />
+            </div>
+            <div className={classNames(projectcss.all, sty.freeBox___1SKCe)}>
+              <div className={classNames(projectcss.all, sty.freeBox___3LqyQ)}>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__tlt8Y
+                  )}
+                >
+                  {"Current balance:"}
+                </div>
+                <ContractValue
+                  data-plasmic-name={"contractValue"}
+                  data-plasmic-override={overrides.contractValue}
+                  address={
+                    "0x655F2166b0709cd575202630952D71E2bB0d61Af" as const
+                  }
+                  arg1={(() => {
+                    try {
+                      return $ctx.account.address;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return undefined;
+                      }
+                      throw e;
+                    }
+                  })()}
+                  className={classNames("__wab_instance", sty.contractValue)}
+                  method={{
+                    isProxied: false,
+                    functionName: "balanceOf",
+                    hasDecimalsMethod: true,
+                    methodAbi: {
+                      inputs: [
+                        {
+                          internalType: "address",
+                          name: "account",
+                          type: "address",
+                        },
+                      ],
+                      name: "balanceOf",
+                      outputs: [
+                        { internalType: "uint256", name: "", type: "uint256" },
+                      ],
+                      stateMutability: "view",
+                      type: "function",
+                    },
+                    abi: [
+                      {
+                        inputs: [
+                          {
+                            internalType: "address",
+                            name: "account",
+                            type: "address",
+                          },
+                        ],
+                        name: "balanceOf",
+                        outputs: [
+                          {
+                            internalType: "uint256",
+                            name: "",
+                            type: "uint256",
+                          },
+                        ],
+                        stateMutability: "view",
+                        type: "function",
+                      },
+                      {
+                        inputs: [],
+                        name: "decimals",
+                        outputs: [
+                          { internalType: "uint8", name: "", type: "uint8" },
+                        ],
+                        stateMutability: "view",
+                        type: "function",
+                      },
+                    ],
+                  }}
+                  respectDecimals={true}
+                />
+
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__sdKj8
+                  )}
+                >
+                  {
+                    "On the right you can see how this number is rendered. \nIt is using pre-defined address here, but it can be a globally configured variable too.\nAfter automatic Etherscan request ABI (including proxy ABI) is available, and contract can be read. \nAmount of arguments is automatically set depending on how much arguments the method has, and global variables like current address are available here."
+                  }
+                </div>
+              </div>
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img__sGd3D)}
+                displayHeight={"auto" as const}
+                displayMaxHeight={"none" as const}
+                displayMaxWidth={"100%" as const}
+                displayMinHeight={"0" as const}
+                displayMinWidth={"0" as const}
+                displayWidth={"251px" as const}
+                loading={"lazy" as const}
+                src={{
+                  src: "/plasmic/blank_project/images/image.png",
+                  fullWidth: 602,
+                  fullHeight: 552,
+                  aspectRatio: undefined,
+                }}
+              />
+            </div>
+            <div className={classNames(projectcss.all, sty.freeBox__gHrAj)}>
+              <div className={classNames(projectcss.all, sty.freeBox__oumvt)}>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__qa69N
+                  )}
+                >
+                  {
+                    'Contract calls are a little bit different, as they are set up as custom behaviors for interactive elements (who has "onClick" method, like Button). '
+                  }
+                </div>
+                <p.PlasmicImg
+                  alt={""}
+                  className={classNames(sty.img___9UnGk)}
+                  displayHeight={"auto" as const}
+                  displayMaxHeight={"none" as const}
+                  displayMaxWidth={"100%" as const}
+                  displayMinHeight={"0" as const}
+                  displayMinWidth={"0" as const}
+                  displayWidth={"416px" as const}
+                  loading={"lazy" as const}
+                  src={{
+                    src: "/plasmic/blank_project/images/image2.png",
+                    fullWidth: 572,
+                    fullHeight: 166,
+                    aspectRatio: undefined,
+                  }}
+                />
+              </div>
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img__nvWpA)}
+                displayHeight={"auto" as const}
+                displayMaxHeight={"none" as const}
+                displayMaxWidth={"100%" as const}
+                displayMinHeight={"0" as const}
+                displayMinWidth={"0" as const}
+                displayWidth={"443px" as const}
+                loading={"lazy" as const}
+                src={{
+                  src: "/plasmic/blank_project/images/image3.png",
+                  fullWidth: 586,
+                  fullHeight: 446,
+                  aspectRatio: undefined,
+                }}
+              />
+            </div>
+            <p.Stack
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__olAsr)}
+            >
+              <AntdInputNumber
+                data-plasmic-name={"numberInput"}
+                data-plasmic-override={overrides.numberInput}
+                className={classNames("__wab_instance", sty.numberInput)}
+                onChange={p.generateStateOnChangeProp($state, [
+                  "numberInput",
+                  "value",
+                ])}
+                value={p.generateStateValueProp($state, [
+                  "numberInput",
+                  "value",
+                ])}
+              />
+
+              <ContractCallOnClick
+                address={"0x655F2166b0709cd575202630952D71E2bB0d61Af" as const}
+                arg1={(() => {
+                  try {
+                    return $state.numberInput.value;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return undefined;
+                    }
+                    throw e;
+                  }
+                })()}
+                arg2={(() => {
+                  try {
+                    return $state.numberInput.value;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return undefined;
+                    }
+                    throw e;
+                  }
+                })()}
+                className={classNames(
+                  "__wab_instance",
+                  sty.contractCallOnClick___0G3Ek
+                )}
+                method={{
+                  isProxied: false,
+                  functionName: "mint",
+                  hasDecimalsMethod: false,
+                  methodAbi: {
+                    inputs: [
+                      {
+                        internalType: "uint256",
+                        name: "amount",
+                        type: "uint256",
+                      },
+                    ],
+                    name: "mint",
+                    outputs: [],
+                    stateMutability: "nonpayable",
+                    type: "function",
+                  },
+                  abi: [
+                    {
+                      inputs: [
+                        {
+                          internalType: "uint256",
+                          name: "amount",
+                          type: "uint256",
+                        },
+                      ],
+                      name: "mint",
+                      outputs: [],
+                      stateMutability: "nonpayable",
+                      type: "function",
+                    },
+                  ],
+                }}
+              >
+                <Button
+                  className={classNames("__wab_instance", sty.button__j6O7)}
+                >
+                  <ContractCallOnClick
+                    address={
+                      "0x39028aaFaae59C3c5d8848fc3Ccc4e4CfD1f124C" as const
+                    }
+                    className={classNames(
+                      "__wab_instance",
+                      sty.contractCallOnClick__iWmwv
+                    )}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__qExEv
+                      )}
+                    >
+                      {"Mint"}
+                    </div>
+                  </ContractCallOnClick>
+                </Button>
+              </ContractCallOnClick>
+            </p.Stack>
+          </section>
         </div>
       </div>
     </React.Fragment>
@@ -178,21 +648,36 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "section", "text", "h1", "connectDisconnect"],
-  section: ["section", "text", "h1"],
-  text: ["text"],
+  root: [
+    "root",
+    "h1",
+    "lidoLogo",
+    "address",
+    "h6",
+    "connectDisconnect",
+    "contractValue",
+    "numberInput",
+  ],
   h1: ["h1"],
+  lidoLogo: ["lidoLogo"],
+  address: ["address"],
+  h6: ["h6"],
   connectDisconnect: ["connectDisconnect"],
+  contractValue: ["contractValue"],
+  numberInput: ["numberInput"],
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  section: "section";
-  text: "div";
   h1: "h1";
+  lidoLogo: typeof LidoLogo;
+  address: typeof Address;
+  h6: "h6";
   connectDisconnect: typeof ConnectDisconnect;
+  contractValue: typeof ContractValue;
+  numberInput: typeof AntdInputNumber;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -255,10 +740,13 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    section: makeNodeComponent("section"),
-    text: makeNodeComponent("text"),
     h1: makeNodeComponent("h1"),
+    lidoLogo: makeNodeComponent("lidoLogo"),
+    address: makeNodeComponent("address"),
+    h6: makeNodeComponent("h6"),
     connectDisconnect: makeNodeComponent("connectDisconnect"),
+    contractValue: makeNodeComponent("contractValue"),
+    numberInput: makeNodeComponent("numberInput"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

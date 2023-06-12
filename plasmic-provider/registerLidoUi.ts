@@ -34,14 +34,15 @@ export const registerLidoUi = (plasmic: NextJsPlasmicComponentLoader) => {
   }
 
 
-  const register = (title: string, props: unknown = {}) => {
+  const register = (title: string, props: unknown = {}, rest: any = {}) => {
     //@ts-expect-error sometimes I hate plasmic
     plasmic.registerComponent(ui[title], {
       name: `@lidofinance/lido-ui#${title}`,
       displayName: title,
       importPath: `@lidofinance/lido-ui`,
       importName: title,
-      props
+      props,
+      ...rest
     });
   };
   const registerPrimitive = (title: string, props: unknown = {}) => {
@@ -64,17 +65,49 @@ export const registerLidoUi = (plasmic: NextJsPlasmicComponentLoader) => {
     }
   });
 
-  register("button", {
+  register("Button", {
     children: "slot",
     size: choice`xxs|xs|sm|md|lg`,
     variant: choice`filled|outlined|text|ghost|translucent`,
     color: choice`primary|secondary|warning|error|success`
   });
+
+  register("Input", {
+    leftDecorator: "slot",
+    rightDecorator: "slot",
+    label: "string",
+    active: "boolean",
+    placeholder: "string",
+    variant: choice`small|default`,
+    color: choice`default|accent`,
+    value: {
+      type: "string",
+      hidden: () => true,
+    },
+    onChange: {
+      type: "eventHandler",
+      argTypes: [
+        {
+          name: "event",
+          type: "object",
+        },
+      ] as any,
+    }
+  }, {
+    states: {
+      value: {
+        type: "writable",
+        valueProp: "value",
+        variableType: "text",
+        onChangeProp: "onChange",
+      }
+    }
+  });
+
   register("Chip", {
     children: "slot",
     variant: choice`positive|negative|warning|gray`
   });
-
 
   register("Checkbox");
 
@@ -105,15 +138,6 @@ export const registerLidoUi = (plasmic: NextJsPlasmicComponentLoader) => {
 
   register("MainMenu", {
     active: choice`stake|wrap|wallet`
-  });
-
-
-  register("AddressBadge", {
-    "address": {
-      "type": "string"
-    },
-    "symbolsMobile": range(3, 21),
-    "symbolsDesktop": range(3, 21)
   });
 
 

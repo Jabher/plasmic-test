@@ -6,6 +6,7 @@
   ],
   "plugins": ["typescript-sort-keys"],
   "rules": {
+    "import/order": "error",
     "import/namespace": "off",
     "react/no-unknown-property": [
       2,
